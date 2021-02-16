@@ -1,0 +1,22 @@
+import logo from './logo.svg';
+import './App.css';
+import {Router} from '@reach/router';
+import Form from './components/Form';
+import Main from './views/Main';
+import Details from './components/Details';
+import Update from './views/Update';
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Main path="products/"/>
+        <Details path="products/:id" /> 
+        <Update path="products/:id/edit"/>
+      
+      </Router> 
+      </div>
+  );
+}
+
+export default App;
